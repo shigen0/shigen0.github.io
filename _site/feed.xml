@@ -1,0 +1,243 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>shigen0</title>
+  <subtitle>A personal blog about cybersecurity.</subtitle>
+  <updated>2024-10-13T19:28:19+02:00</updated>
+  <author>
+    <name>Yaceno</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
+  <rights> © 2024 Yaceno </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>How to create a CTF</title>
+    <link href="http://localhost:4000/posts/FSIIEC_CTF_experience/" rel="alternate" type="text/html" title="How to create a CTF" />
+    <published>2024-09-26T00:00:00+02:00</published>
+  
+    <updated>2024-09-26T00:00:00+02:00</updated>
+  
+    <id>http://localhost:4000/posts/FSIIEC_CTF_experience/</id>
+    <content src="http://localhost:4000/posts/FSIIEC_CTF_experience/" />
+    <author>
+      <name>Yaceno</name>
+    </author>
+
+  
+    
+    <category term="Articles" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Introduction:
+
+Hey guys ! It’s been a long time since i didn’t write an article so I decided to come back with a completely different subject from what I’m used to propose on this blog.
+Basically I usualy write technical articles about tools that I create or write ups of ctf challenges, but today the topic will be Creating a CTF from an admin point of view. In fact with my security club Securit...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Challengefox - Flag4All 2023</title>
+    <link href="http://localhost:4000/posts/Challengefox/" rel="alternate" type="text/html" title="Challengefox - Flag4All 2023" />
+    <published>2023-10-21T00:00:00+02:00</published>
+  
+    <updated>2023-10-21T00:00:00+02:00</updated>
+  
+    <id>http://localhost:4000/posts/Challengefox/</id>
+    <content src="http://localhost:4000/posts/Challengefox/" />
+    <author>
+      <name>Yaceno</name>
+    </author>
+
+  
+    
+    <category term="Write-ups" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Introduction:
+
+
+
+The “Challenge Fox” is a PHP-based web challenge that tests participants’ understanding of PHP quirks, string manipulation, and hash vulnerabilities. The challenge consists of four main steps, each requiring a unique approach to solve.
+
+Step 1: Code Deobfuscation
+
+Upon first inspection, the provided PHP code is obfuscated using hexadecimal representations of characters. This ma...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Coffee Shop - PatriotCTF 2023</title>
+    <link href="http://localhost:4000/posts/Patchwork_PatriotCTF_2023/" rel="alternate" type="text/html" title="Coffee Shop - PatriotCTF 2023" />
+    <published>2023-09-09T00:00:00+02:00</published>
+  
+    <updated>2023-09-09T00:00:00+02:00</updated>
+  
+    <id>http://localhost:4000/posts/Patchwork_PatriotCTF_2023/</id>
+    <content src="http://localhost:4000/posts/Patchwork_PatriotCTF_2023/" />
+    <author>
+      <name>Yaceno</name>
+    </author>
+
+  
+    
+    <category term="Write-ups" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Challenge
+
+Here’s a write-up for a reverse challenge.
+The challenge description :
+
+
+
+Exploitation
+
+We open the file with gdb and then disassemble the main function which is often the most interesting function in reverse challenges.
+
+gdb ./patchwork
+
+(gdb) disas main
+Dump of assembler code for function main:
+   0x0000000000001139 &amp;lt;+0&amp;gt;:     push   %rbp
+   0x000000000000113a &amp;lt;+1&amp;gt;:     ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Discovering public passwords in Active Directory</title>
+    <link href="http://localhost:4000/posts/Crumby/" rel="alternate" type="text/html" title="Discovering public passwords in Active Directory" />
+    <published>2023-08-03T00:00:00+02:00</published>
+  
+    <updated>2023-08-03T00:00:00+02:00</updated>
+  
+    <id>http://localhost:4000/posts/Crumby/</id>
+    <content src="http://localhost:4000/posts/Crumby/" />
+    <author>
+      <name>Yaceno</name>
+    </author>
+
+  
+    
+    <category term="Articles" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Okay, so the story that motivated me for this article was that I found some password in public text fields during a pentest on a Active directory lab during my cybersecurity internship.
+I decided to automate this task because I didn’t find any tool to do it. (feel free to tell me if it exists already)
+
+Passwords In Disguise
+So, this situation is pretty rare, but it can happen that forgetful adm...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>FCSC 2023 - Enisa flag store 1</title>
+    <link href="http://localhost:4000/posts/FCSC_Enisa_flag_store_1/" rel="alternate" type="text/html" title="FCSC 2023 - Enisa flag store 1" />
+    <published>2023-04-30T00:00:00+02:00</published>
+  
+    <updated>2023-04-30T00:00:00+02:00</updated>
+  
+    <id>http://localhost:4000/posts/FCSC_Enisa_flag_store_1/</id>
+    <content src="http://localhost:4000/posts/FCSC_Enisa_flag_store_1/" />
+    <author>
+      <name>Yaceno</name>
+    </author>
+
+  
+    
+    <category term="Write-ups" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Reconnaissance
+
+Here’s the challenge, a .go file is given too with the link to the website :
+
+
+
+There’s a mention of a database : we directly plan to do a sqli
+
+
+
+So we see a classic signup page
+
+func getData(user User) (
+    []Flag,
+    error,
+) {
+    var flags []Flag
+
+    req := fmt.Sprintf(`SELECT ctf, challenge, flag, points
+                        FROM flags WHERE country = '%s';`, user.Co...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
