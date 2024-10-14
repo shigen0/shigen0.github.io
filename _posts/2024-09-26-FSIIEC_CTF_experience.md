@@ -5,7 +5,7 @@ tags: []
 categories: [Articles]
 ---
 
-# Introduction:
+# Introduction
 
 Hey guys ! It's been a long time since i didn't write an article so I decided to come back with a completely different subject from what I'm used to propose on this blog.  
 Basically I usualy write technical articles about tools that I create or write ups of ctf challenges, but today the topic will be **Creating a CTF from an admin point of view**. In fact with my security club SecuritIIE we organized a CTF called FSIIEC CTF, accompanied by FSEC-SS the security club of APU. This article will be mix of advices and feedback from the organization of our CTF.  
