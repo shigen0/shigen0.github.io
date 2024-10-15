@@ -21,7 +21,6 @@ timezone:
 title: shigen0 # the main title
 
 tagline: Cybersec noob passionate about science in general # it will display as the sub-title
-
 description: >- # used by seo meta and the atom feed
   A personal blog about cybersecurity.
 
