@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Discovering public passwords in Active Directory</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Discovering public passwords in Active Directory" />
+<meta name="author" content="Yacine Souam" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Okay, so the story that motivated me for this article was that I found some password in public text fields during a pentest on a Active directory lab during my cybersecurity internship. I decided to automate this task because I didn’t find any tool to do it. (feel free to tell me if it exists already)" />
+<meta property="og:description" content="Okay, so the story that motivated me for this article was that I found some password in public text fields during a pentest on a Active directory lab during my cybersecurity internship. I decided to automate this task because I didn’t find any tool to do it. (feel free to tell me if it exists already)" />
+<link rel="canonical" href="http://localhost:4000/crumby.html" />
+<meta property="og:url" content="http://localhost:4000/crumby.html" />
+<meta property="og:site_name" content="shigen0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-08-03T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Discovering public passwords in Active Directory" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yacine Souam"},"dateModified":"2023-08-03T00:00:00+02:00","datePublished":"2023-08-03T00:00:00+02:00","description":"Okay, so the story that motivated me for this article was that I found some password in public text fields during a pentest on a Active directory lab during my cybersecurity internship. I decided to automate this task because I didn’t find any tool to do it. (feel free to tell me if it exists already)","headline":"Discovering public passwords in Active Directory","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/crumby.html"},"url":"http://localhost:4000/crumby.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="shigen0" /><link rel="shortcut icon" type="image/x-icon" href="/logo.png" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2023-08-03 00:00:00 +0200">2023-08-03</time>
+  </p>
+  
+  <h1>Discovering public passwords in Active Directory</h1>
+
+  <p>Okay, so the story that motivated me for this article was that I found some password in public text fields during a pentest on a Active directory lab during my cybersecurity internship.
+I decided to automate this task because I didn’t find any tool to do it. (feel free to tell me if it exists already)</p>
+
+<h2 id="passwords-in-disguise">Passwords in disguise</h2>
+<p>So, this situation is pretty rare, but it can happen that forgetful administrators might have saved passwords in plaintext in AD public text fields, specifically in the description fields. This may be because they wanted it back quickly after a short period, or because they simply forgot about it.</p>
+
+<p><img src="/assets/images/activedirectory/crumby.jpg" alt="Crumby" /></p>
+
+<h2 id="introducing-the-crumbs-finder-crumby">Introducing the crumbs finder: Crumby</h2>
+<p>But what if we could automate this search? Sounds good, right? Enter Crumby, a simple tool that I’ve been fiddling with. Crumby, in a nutshell, scans through the AD environment, hunting down those rogue plaintext passwords and even sprays them against all user accounts for possible matches.</p>
+
+<p>Now, before you start testing it, let me assure you that’s not a game changer at all ! Perhaps it exists and it’s as straightforward as it gets. But hey, even the simplest of tools can be potent when used right !</p>
+
+<h2 id="using-crumby">Using crumby</h2>
+<p>All the details can be found in the github repo : <a href="https://github.com/shigen0/Crumby">Crumby</a></p>
+
+<p>Enjoy 👋</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>

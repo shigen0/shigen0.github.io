@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>web- ZITF2023 - Website Renderer 1</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="web- ZITF2023 - Website Renderer 1" />
+<meta name="author" content="Yacine Souam" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reconnaissance" />
+<meta property="og:description" content="Reconnaissance" />
+<link rel="canonical" href="http://localhost:4000/zitf2023-website-renderer-1.html" />
+<meta property="og:url" content="http://localhost:4000/zitf2023-website-renderer-1.html" />
+<meta property="og:site_name" content="shigen0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-18T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="web- ZITF2023 - Website Renderer 1" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yacine Souam"},"dateModified":"2023-03-18T00:00:00+01:00","datePublished":"2023-03-18T00:00:00+01:00","description":"Reconnaissance","headline":"web- ZITF2023 - Website Renderer 1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/zitf2023-website-renderer-1.html"},"url":"http://localhost:4000/zitf2023-website-renderer-1.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="shigen0" /><link rel="shortcut icon" type="image/x-icon" href="/logo.png" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2023-03-18 00:00:00 +0100">2023-03-18</time>
+  </p>
+  
+  <h1>web- ZITF2023 - Website Renderer 1</h1>
+
+  <h2 id="reconnaissance">Reconnaissance</h2>
+
+<p>We clearly recognize that there’s a potential SSTI (Server-Side template injection) in this challenge. The idea for beginning the exploiting part is to run a basic payload to see what it gives.</p>
+
+<h2 id="exploitation">Exploitation</h2>
+
+<p><img src="assets/images/zitf2023/6.jpg" alt="i2" /></p>
+
+<p>So we see that the {7*7} is well interpreted</p>
+
+<p>We can continue with a random payload to learn more about the template engine, by triggering an error :</p>
+
+<p><img src="assets/images/zitf2023/7.jpg" alt="i2" /></p>
+
+<p>We get an error that tells us the name of the engine: Genshi, I didn’t use this info but it may be useful in other ways of exploitation or challenges.
+Let’s go on with a classic payload to execute a bash command, it returns 0 so the command was successful (1 if execution error).</p>
+
+<p><img src="assets/images/zitf2023/8.jpg" alt="i2" /></p>
+
+<p>But obviously we want the result of the command, not the return code, so we’ll rely on the fact that /tmp is a folder where we can very often write files in challenges. Finally we read the content of this file we have just written.
+Bingo, we see the list of files, the next part comes logically…</p>
+
+<p><img src="assets/images/zitf2023/9.jpg" alt="i2" /></p>
+
+<p>We’ll just go to “flag” (after testing that it was a folder), then read flag.txt. These two operations are also based on files in /tmp.</p>
+
+<p><img src="assets/images/zitf2023/10.jpg" alt="i2" />
+<img src="assets/images/zitf2023/11.jpg" alt="i2" /></p>
+
+<p>Flagged !</p>
+
+<p><a href="https://github.com/yaceno/ZITF2023/tree/main/Website%20Renderer%201">Github repo</a></p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,19 +1,19 @@
 ---
-title: FCSC 2023 - Enisa flag store 1
-date: 2023-04-30 +0200
-tags: [Web security, SQL Injection]
-categories: [Write-ups]
+title: web - fcsc 2023 - Enisa flag store 1
+layout: post
+# tags: [Web security, SQL Injection]
+category: write-ups
 ---
 
 # Reconnaissance
 
 Here's the challenge, a .go file is given too with the link to the website :  
 
-![1-0](../../assets/fcsc2023/1-0.png)  
+![1-0](assets/images/fcsc2023/1-0.png)  
 
 There's a mention of a database : we directly plan to do a sqli
 
-![1-1](../../assets/fcsc2023/1-1.png)  
+![1-1](assets/images/fcsc2023/1-1.png)  
 
 So we see a classic signup page  
 
@@ -53,13 +53,13 @@ By analyzing the code, we understand that getData is called in show_flags, which
 
 # Exploitation
 
-![1-1.5](../../assets/fcsc2023/1-1.5.png)  
+![1-1.5](assets/images/fcsc2023/1-1.5.png)  
 
 
-![1-2](../../assets/fcsc2023/1-2.png) 
+![1-2](assets/images/fcsc2023/1-2.png) 
 
 The problem is that we're forced to select a country, so we can't inject our payload. But using BurpSuite, it is possible !
 
-![1-3](../../assets/fcsc2023/1-3.png)  
+![1-3](assets/images/fcsc2023/1-3.png)  
 
 Then we go to /flags, and we see the flag appearing at the top ! (if i didn't inject the payload it would print only the french flags related to my token and not this one) 

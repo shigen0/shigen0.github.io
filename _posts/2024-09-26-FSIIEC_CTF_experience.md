@@ -1,8 +1,7 @@
 ---
 title: How to create a CTF
-date: 2024-09-26 +0200
-tags: []
-categories: [Articles]
+layout: post
+category: articles
 ---
 
 # Introduction
@@ -37,7 +36,7 @@ That's a *crucial* question, are you building this ctf with friends, colleagues 
 In our case all the members of our security club + two students from the same school joined together for that CTF.  
 From my experience it's important to keep it as few as possible, too much people means harder communication, harder communication means more complex organization... Ya understand !  
 
-So it's important to maintain a balance between the number of people and the tasks assigned, so as not to spread yourself too thinly or end up with too much imbalance in the work done.  
+So it's important to maintain a balance between the number of people and the tasks assigned, so as not to spread yourself too thinly or end up with too much imbalance in the work done.   
 
 Going back to our CTF, we basically had multiple persons with various skills : cryptography, reverse engineering, web... So it wasn't hard deciding who will be in charge of what in priority. But don't forget that one must not keep himself too focused on one category, helping others is part of the process too !  
 

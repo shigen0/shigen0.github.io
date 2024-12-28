@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>web - challengefox - Flag4All 2023</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="web - challengefox - Flag4All 2023" />
+<meta name="author" content="Yacine Souam" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction:" />
+<meta property="og:description" content="Introduction:" />
+<link rel="canonical" href="http://localhost:4000/challengefox.html" />
+<meta property="og:url" content="http://localhost:4000/challengefox.html" />
+<meta property="og:site_name" content="shigen0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-21T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="web - challengefox - Flag4All 2023" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yacine Souam"},"dateModified":"2023-10-21T00:00:00+02:00","datePublished":"2023-10-21T00:00:00+02:00","description":"Introduction:","headline":"web - challengefox - Flag4All 2023","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/challengefox.html"},"url":"http://localhost:4000/challengefox.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="shigen0" /><link rel="shortcut icon" type="image/x-icon" href="/logo.png" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2023-10-21 00:00:00 +0200">2023-10-21</time>
+  </p>
+  
+  <h1>web - challengefox - Flag4All 2023</h1>
+
+  <h1 id="introduction">Introduction:</h1>
+
+<p>The “Challenge Fox” is a PHP-based web challenge that tests participants’ understanding of PHP quirks, string manipulation, and hash vulnerabilities. The challenge consists of four main steps, each requiring a unique approach to solve.</p>
+
+<h2 id="step-1-code-deobfuscation">Step 1: Code Deobfuscation</h2>
+
+<p>Upon first inspection, the provided PHP code is obfuscated using hexadecimal representations of characters. This makes the code unreadable and challenging to understand.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?php</span>
+<span class="k">goto</span> <span class="n">rjJoj</span><span class="p">;</span>
+<span class="n">l5p8t</span><span class="o">:</span>
+<span class="nv">$variable</span> <span class="o">=</span> <span class="nb">str_replace</span><span class="p">(</span><span class="s2">"</span><span class="se">\143\x68\141\154\154\145\x6e\147\x65\146\x6f\x78</span><span class="s2">"</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="nv">$variable</span><span class="p">);</span>
+<span class="k">goto</span> <span class="nc">MGxdQ</span><span class="p">;</span>
+<span class="n">lIReG</span><span class="o">:</span>
+<span class="k">function</span> <span class="n">echec</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="k">goto</span> <span class="n">jCY0w</span><span class="p">;</span>
+<span class="nc">Dm3Uc</span><span class="o">:</span>
+<span class="nf">source</span><span class="p">();</span>
+<span class="k">goto</span> <span class="n">pj4hI</span><span class="p">;</span>
+<span class="n">jCY0w</span><span class="o">:</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\x45\143\x68\x65\143\x2e\x20\74\x62\x72\40\57\76</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">goto</span> <span class="nc">Dm3Uc</span><span class="p">;</span>
+<span class="n">pj4hI</span><span class="o">:</span>
+<span class="k">exit</span><span class="p">;</span>
+<span class="k">goto</span> <span class="n">gPDe0</span><span class="p">;</span>
+<span class="n">gPDe0</span><span class="o">:</span>
+<span class="p">}</span>
+<span class="k">goto</span> <span class="n">lbiZM</span><span class="p">;</span>
+<span class="n">bOncl</span><span class="o">:</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$variable</span> <span class="o">===</span> <span class="s2">"</span><span class="se">\143\x68\141\x6c\154\145\156\147\145\146\157\x78</span><span class="s2">"</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\x2d\x20\123\x69\40\143\145\x20\x74\x65\170\164\x65\x20\x61\x70\x70\x61\x72\x61\151\164\54\x20\x74\165\40\166\x61\154\x69\x64\x65\40\x6c\x61\x20\160\x72\x65\x6d\151\x65\162\x65\40\x65\x74\141\x70\x65\41\40\74\x62\x72\76</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">"</span><span class="se">\143\150\x61\x6c\154\x65\x6e\147\x65\137\x66\157\x78</span><span class="s2">"</span><span class="p">]))</span> <span class="p">{</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\x2d\x20\104\145\165\x78\151\x65\155\x65\40\145\x74\141\160\145\x20\x76\141\154\x69\x64\145\41\x20\x3c\x62\162\x3e</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">hash</span><span class="p">(</span><span class="s2">"</span><span class="se">\155\x64\x32</span><span class="s2">"</span><span class="p">,</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"</span><span class="se">\x76\141\x72\151\141\x62\x6c\x65\x32</span><span class="s2">"</span><span class="p">])</span> <span class="o">==</span> <span class="s2">"</span><span class="se">\60</span><span class="s2">"</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\55\x20\124\x72\x6f\151\163\x69\x65\155\145\x20\145\164\141\160\x65\40\166\x61\x6c\151\x64\145\x21\x20\74\142\x72\x3e</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">hash</span><span class="p">(</span><span class="s2">"</span><span class="se">\x73\x68\141\x31</span><span class="s2">"</span><span class="p">,</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"</span><span class="se">\166\x61\x72\x69\141\x62\154\145\x33</span><span class="s2">"</span><span class="p">])</span> <span class="o">==</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"</span><span class="se">\x76\x61\x72\151\141\142\154\145\63</span><span class="s2">"</span><span class="p">])</span> <span class="p">{</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\55\40\x4f\153\x61\171\x2c\40\x76\x6f\151\x63\151\40\154\145\x20\146\154\x61\147\40\x3a\x20</span><span class="s2">"</span> <span class="mf">.</span> <span class="nv">$secretflag</span> <span class="mf">.</span> <span class="s2">"</span><span class="se">\74\142\x72\x3e</span><span class="s2">"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="k">goto</span> <span class="n">nKESF</span><span class="p">;</span>
+<span class="no">HVY3V</span><span class="o">:</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\74\x70\x3e\x41\x6e\x61\x6c\171\x73\x65\x72\x20\154\x65\x20\143\157\x64\145\40\143\151\40\x64\x65\x73\x73\x6f\x75\163\x20\145\x74\x20\x74\x72\157\165\166\145\x72\x20\x6c\145\40\x6d\x6f\x79\x65\x6e\40\x64\40\x61\x66\x66\x69\x63\x68\x65\x72\x20\x6c\x65\x20\x66\154\141\x67\x2e\74\160\76</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">goto</span> <span class="n">g9hQi</span><span class="p">;</span>
+<span class="n">lbiZM</span><span class="o">:</span>
+<span class="nv">$variable</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"</span><span class="se">\166\141\x72\x69\141\142\154\145</span><span class="s2">"</span><span class="p">];</span>
+<span class="k">goto</span> <span class="n">l5p8t</span><span class="p">;</span>
+<span class="nc">Oz2JG</span><span class="o">:</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\x3c\164\151\x74\154\145\76\x43\x68\x61\154\154\145\156\147\x65\40\x46\157\x78\x3c\x2f\164\151\x74\154\x65\76</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">goto</span> <span class="nc">E0h5E</span><span class="p">;</span>
+<span class="nc">MGxdQ</span><span class="o">:</span>
+<span class="nv">$query</span> <span class="o">=</span> <span class="nb">urldecode</span><span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"</span><span class="se">\x51\x55\x45\122\x59\x5f\123\x54\122\x49\x4e\x47</span><span class="s2">"</span><span class="p">]);</span>
+<span class="k">goto</span> <span class="no">Z_G58</span><span class="p">;</span>
+<span class="nc">MYfqC</span><span class="o">:</span>
+<span class="k">function</span> <span class="n">source</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="k">goto</span> <span class="n">nUBkJ</span><span class="p">;</span>
+<span class="n">pqZ02</span><span class="o">:</span>
+<span class="nb">highlight_string</span><span class="p">(</span><span class="nb">file_get_contents</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">));</span>
+<span class="k">goto</span> <span class="no">P9KZ3</span><span class="p">;</span>
+<span class="n">nUBkJ</span><span class="o">:</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\x3c\x62\162\76\x3c\143\x6f\144\145\76</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">goto</span> <span class="n">pqZ02</span><span class="p">;</span>
+<span class="no">P9KZ3</span><span class="o">:</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\74\x2f\x63\157\144\145\76</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">goto</span> <span class="nc">NTzIV</span><span class="p">;</span>
+<span class="nc">NTzIV</span><span class="o">:</span>
+<span class="p">}</span>
+<span class="k">goto</span> <span class="n">lIReG</span><span class="p">;</span>
+<span class="nc">E0h5E</span><span class="o">:</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\74\x62\x3e\x43\150\x61\154\154\x65\x6e\x67\x65\40\106\157\x78\74\x2f\x62\76</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">goto</span> <span class="no">HVY3V</span><span class="p">;</span>
+<span class="no">Z_G58</span><span class="o">:</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">preg_match</span><span class="p">(</span><span class="s2">"</span><span class="se">\x2f\x20\174\137\x2f</span><span class="s2">"</span><span class="p">,</span> <span class="nv">$query</span><span class="p">))</span> <span class="p">{</span>
+<span class="nf">echec</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">goto</span> <span class="n">bOncl</span><span class="p">;</span>
+<span class="n">g9hQi</span><span class="o">:</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\74\142\x72\76\x3c\110\x52\76\x3c\142\162\76</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">goto</span> <span class="nc">MYfqC</span><span class="p">;</span>
+<span class="n">rjJoj</span><span class="o">:</span>
+<span class="k">include</span> <span class="s2">"</span><span class="se">\146\x6c\x61\147\x2e\160\150\x70</span><span class="s2">"</span><span class="p">;</span>
+<span class="k">goto</span> <span class="nc">Oz2JG</span><span class="p">;</span>
+<span class="n">nKESF</span><span class="o">:</span>
+<span class="nf">source</span><span class="p">();</span> 
+</code></pre></div></div>
+
+<p><strong>Solution:</strong> One could use various online tools or scripts to convert these hexadecimal values back to their ASCII counterparts.</p>
+
+<p>This gives us the following code :</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">goto</span> <span class="n">start</span><span class="p">;</span>
+<span class="n">step1</span><span class="o">:</span>
+<span class="nv">$variable</span> <span class="o">=</span> <span class="nb">str_replace</span><span class="p">(</span><span class="s2">"challengefox"</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="nv">$variable</span><span class="p">);</span>
+<span class="k">goto</span> <span class="n">step2</span><span class="p">;</span>
+<span class="n">echec</span><span class="o">:</span>
+<span class="k">function</span> <span class="n">echec</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"Echec. &lt;br /&gt;"</span><span class="p">;</span>
+    <span class="nf">source</span><span class="p">();</span>
+    <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">step2</span><span class="o">:</span>
+<span class="nv">$variable</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"variable"</span><span class="p">];</span>
+<span class="n">step3</span><span class="o">:</span>
+<span class="nv">$query</span> <span class="o">=</span> <span class="nb">urldecode</span><span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"QUERY_STRING"</span><span class="p">]);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">preg_match</span><span class="p">(</span><span class="s2">"/ |_/"</span><span class="p">,</span> <span class="nv">$query</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nf">echec</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$variable</span> <span class="o">===</span> <span class="s2">"challengefox"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"- Si ce texte apparait, tu valides la premiere etape! &lt;br /&gt;"</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">"challenge_fox"</span><span class="p">]))</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">"- Deuxieme etape valide! &lt;br /&gt;"</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">hash</span><span class="p">(</span><span class="s2">"md2"</span><span class="p">,</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"variable2"</span><span class="p">])</span> <span class="o">==</span> <span class="s2">"0"</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">echo</span> <span class="s2">"- Troisieme etape valide! &lt;br /&gt;"</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nb">hash</span><span class="p">(</span><span class="s2">"sha1"</span><span class="p">,</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"variable3"</span><span class="p">])</span> <span class="o">==</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"variable3"</span><span class="p">])</span> <span class="p">{</span>
+                <span class="k">echo</span> <span class="s2">"- Okay, voici le flag : "</span> <span class="mf">.</span> <span class="nv">$secretflag</span> <span class="mf">.</span> <span class="s2">"&lt;br /&gt;"</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nf">source</span><span class="p">();</span>
+
+<span class="k">function</span> <span class="n">source</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"&lt;br /&gt;&lt;code&gt;"</span><span class="p">;</span>
+    <span class="nb">highlight_string</span><span class="p">(</span><span class="nb">file_get_contents</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">));</span>
+    <span class="k">echo</span> <span class="s2">"&lt;/code&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">start</span><span class="o">:</span>
+<span class="k">include</span> <span class="s2">"flag.php"</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">"&lt;title&gt;Challenge Fox&lt;/title&gt;"</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">"&lt;b&gt;Challenge Fox&lt;/b&gt;"</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">"&lt;p&gt;Analyser le code ci dessous et trouver le moyen d afficher le flag.&lt;p&gt;"</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">"&lt;br /&gt;&lt;HR&gt;&lt;br /&gt;"</span><span class="p">;</span>
+
+</code></pre></div></div>
+
+<h2 id="step-2-bypassing-the-first-check">Step 2: Bypassing the First Check</h2>
+
+<p>The first check requires the <code class="language-plaintext highlighter-rouge">$variable</code> to be equal to “challengefox”. However, there’s a twist. The code uses <code class="language-plaintext highlighter-rouge">str_replace</code> to remove the string “challengefox” from the <code class="language-plaintext highlighter-rouge">$variable</code>.</p>
+
+<p><strong>Solution:</strong> To bypass this, we can introduce the string “chachallengefoxllengefox” in the <code class="language-plaintext highlighter-rouge">$variable</code>. This way, after the removal of the first occurrence, the second one remains intact. The parameter to be passed is: <code class="language-plaintext highlighter-rouge">variable=chachallengefoxllengefox</code>.</p>
+
+<h2 id="step-3-bypassing-the-underscore-filter">Step 3: Bypassing the Underscore Filter</h2>
+
+<p>For the second step, the challenge is to set the <code class="language-plaintext highlighter-rouge">challenge_fox</code> parameter without using an underscore, as it’s filtered out.</p>
+
+<p><strong>Solution:</strong> PHP interprets dots in GET parameter names as underscores. Thus, by setting the parameter as <code class="language-plaintext highlighter-rouge">challenge.fox</code>, it’s internally interpreted as <code class="language-plaintext highlighter-rouge">challenge_fox</code>.</p>
+
+<h2 id="step-4--5-exploiting-magic-hashes">Step 4 &amp; 5: Exploiting Magic Hashes</h2>
+
+<p>The third and fourth steps involve comparing hashes. PHP has a known quirk with certain hash values, known as “magic hashes”. When using loose comparison (<code class="language-plaintext highlighter-rouge">==</code>), these hashes can be interpreted as other values.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>
+    <p>For the third step, we need a string whose <code class="language-plaintext highlighter-rouge">md2</code> hash is equal to “0” when using loose comparison. The value <code class="language-plaintext highlighter-rouge">variable2=2HlFqrdIKK6z</code> produces an <code class="language-plaintext highlighter-rouge">md2</code> hash that, when compared loosely in PHP, is equal to “0”.</p>
+  </li>
+  <li>
+    <p>For the fourth step, we exploit the <code class="language-plaintext highlighter-rouge">sha1</code> hash. The value <code class="language-plaintext highlighter-rouge">variable3=0e00000000000000000000081614617300000000</code> produces a <code class="language-plaintext highlighter-rouge">sha1</code> hash that, when compared loosely, is equal to itself. This is because any string of the form <code class="language-plaintext highlighter-rouge">0eX</code> where <code class="language-plaintext highlighter-rouge">X</code> is all numbers is considered as 0 in scientific notation in PHP.</p>
+  </li>
+</ol>
+
+<h2 id="final">Final</h2>
+
+<p>Finally we get the flag : ESD{ChallengeFox486217935}</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>

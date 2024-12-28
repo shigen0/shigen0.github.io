@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>web - fcsc 2023 - Enisa flag store 1</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="web - fcsc 2023 - Enisa flag store 1" />
+<meta name="author" content="Yacine Souam" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reconnaissance" />
+<meta property="og:description" content="Reconnaissance" />
+<link rel="canonical" href="http://localhost:4000/fcsc-enisa-flag-store-1.html" />
+<meta property="og:url" content="http://localhost:4000/fcsc-enisa-flag-store-1.html" />
+<meta property="og:site_name" content="shigen0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-30T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="web - fcsc 2023 - Enisa flag store 1" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yacine Souam"},"dateModified":"2023-04-30T00:00:00+02:00","datePublished":"2023-04-30T00:00:00+02:00","description":"Reconnaissance","headline":"web - fcsc 2023 - Enisa flag store 1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/fcsc-enisa-flag-store-1.html"},"url":"http://localhost:4000/fcsc-enisa-flag-store-1.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="shigen0" /><link rel="shortcut icon" type="image/x-icon" href="/logo.png" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2023-04-30 00:00:00 +0200">2023-04-30</time>
+  </p>
+  
+  <h1>web - fcsc 2023 - Enisa flag store 1</h1>
+
+  <h1 id="reconnaissance">Reconnaissance</h1>
+
+<p>Here’s the challenge, a .go file is given too with the link to the website :</p>
+
+<p><img src="assets/images/fcsc2023/1-0.png" alt="1-0" /></p>
+
+<p>There’s a mention of a database : we directly plan to do a sqli</p>
+
+<p><img src="assets/images/fcsc2023/1-1.png" alt="1-1" /></p>
+
+<p>So we see a classic signup page</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">func</span> <span class="n">getData</span><span class="p">(</span><span class="n">user</span> <span class="n">User</span><span class="p">)</span> <span class="p">(</span>
+    <span class="p">[]</span><span class="n">Flag</span><span class="p">,</span>
+    <span class="kt">error</span><span class="p">,</span>
+<span class="p">)</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="n">flags</span> <span class="p">[]</span><span class="n">Flag</span>
+
+    <span class="n">req</span> <span class="o">:=</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">`SELECT ctf, challenge, flag, points
+                        FROM flags WHERE country = '%s';`</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">Country</span><span class="p">);</span>
+    <span class="n">rows</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">db</span><span class="o">.</span><span class="n">Query</span><span class="p">(</span><span class="n">req</span><span class="p">);</span>
+    <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">flags</span><span class="p">,</span> <span class="n">err</span>
+    <span class="p">}</span>
+    <span class="k">defer</span> <span class="n">rows</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">rows</span><span class="o">.</span><span class="n">Next</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="n">flag</span> <span class="n">Flag</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">rows</span><span class="o">.</span><span class="n">Scan</span><span class="p">(</span><span class="o">&amp;</span><span class="n">flag</span><span class="o">.</span><span class="n">CTF</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">flag</span><span class="o">.</span><span class="n">Challenge</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">flag</span><span class="o">.</span><span class="n">Flag</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">flag</span><span class="o">.</span><span class="n">Points</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">flags</span><span class="p">,</span> <span class="n">err</span>
+        <span class="p">}</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="nb">append</span><span class="p">(</span><span class="n">flags</span><span class="p">,</span> <span class="n">flag</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="n">err</span> <span class="o">=</span> <span class="n">rows</span><span class="o">.</span><span class="n">Err</span><span class="p">();</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">flags</span><span class="p">,</span> <span class="n">err</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">flags</span><span class="p">,</span> <span class="no">nil</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Returning back to the code, we have to analyze it. All the sql requests in the .go file are prepared, except one in the getData function… Does that mean that we could exploit it ? 👀<br />
+By analyzing the code, we understand that getData is called in show_flags, which is called itself when we go to the /flags section in the website. So the plan is to inject what we want in the country field, which can be modified only once : during the signup !</p>
+
+<h1 id="exploitation">Exploitation</h1>
+
+<p><img src="assets/images/fcsc2023/1-1.5.png" alt="1-1.5" /></p>
+
+<p><img src="assets/images/fcsc2023/1-2.png" alt="1-2" /></p>
+
+<p>The problem is that we’re forced to select a country, so we can’t inject our payload. But using BurpSuite, it is possible !</p>
+
+<p><img src="assets/images/fcsc2023/1-3.png" alt="1-3" /></p>
+
+<p>Then we go to /flags, and we see the flag appearing at the top ! (if i didn’t inject the payload it would print only the french flags related to my token and not this one)</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>

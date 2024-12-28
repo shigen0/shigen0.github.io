@@ -1,0 +1,42 @@
+# For documentation on this file, see:
+# https://github.com/riggraz/no-style-please#customize-the-menu
+
+entries:
+  - title: me 
+    entries:
+      - title: In two lines
+        entries:
+          - title: Security researcher at FuzzingLabs
+          - title: Deeptech passionate, feel free to reach out if you wanna talk about cutting-edge tech
+      - title: Let's talk ;)
+        entries:
+          - title: Root-me
+            url: https://root-me.org/shigen0
+          - title: Github
+            url: https://github.com/shigen0
+          - title: Mail
+            url: mailto:yacine-souam.pro@protonmail.com
+
+  - title: articles
+    post_list:
+      category: articles
+      show_more: true
+      show_more_text: See more posts...
+      #show_more_url: example2-archive.html
+
+  - title: write-ups
+    post_list:
+      category: write-ups
+      show_more: true
+      show_more_text: See archive...
+      show_more_url: archive.html
+
+  # - title: all posts
+  #   post_list:
+  #     limit: 10
+  #     show_more: true
+  #     show_more_text: See archive...
+  #     show_more_url: archive.html
+
+  - title: rss
+    url: feed.xml

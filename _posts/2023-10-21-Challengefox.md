@@ -1,13 +1,11 @@
 ---
-title: Challengefox - Flag4All 2023
-date: 2023-10-21 +0200
-tags: [Web security, Php, Code audit]
-categories: [Write-ups]
+title: web - challengefox - Flag4All 2023
+layout: post
+# tags: [Web security, Php, Code audit]
+category: write-ups
 ---
 
 # Introduction:
-
-![i3](../../assets/flag4all/challengefox.png)
 
 The "Challenge Fox" is a PHP-based web challenge that tests participants' understanding of PHP quirks, string manipulation, and hash vulnerabilities. The challenge consists of four main steps, each requiring a unique approach to solve.
 

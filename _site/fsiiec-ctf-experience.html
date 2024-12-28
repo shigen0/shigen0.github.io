@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>How to create a CTF</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="How to create a CTF" />
+<meta name="author" content="Yacine Souam" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction" />
+<meta property="og:description" content="Introduction" />
+<link rel="canonical" href="http://localhost:4000/fsiiec-ctf-experience.html" />
+<meta property="og:url" content="http://localhost:4000/fsiiec-ctf-experience.html" />
+<meta property="og:site_name" content="shigen0" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-26T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How to create a CTF" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yacine Souam"},"dateModified":"2024-09-26T00:00:00+02:00","datePublished":"2024-09-26T00:00:00+02:00","description":"Introduction","headline":"How to create a CTF","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/fsiiec-ctf-experience.html"},"url":"http://localhost:4000/fsiiec-ctf-experience.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="shigen0" /><link rel="shortcut icon" type="image/x-icon" href="/logo.png" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head><body a="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-09-26 00:00:00 +0200">2024-09-26</time>
+  </p>
+  
+  <h1>How to create a CTF</h1>
+
+  <h1 id="introduction">Introduction</h1>
+
+<p>Hey guys ! It’s been a long time since i didn’t write an article so I decided to come back with a completely different subject from what I’m used to propose on this blog.<br />
+Basically I usualy write technical articles about tools that I create or write ups of ctf challenges, but today the topic will be <strong>Creating a CTF from an admin point of view</strong>. In fact with my security club SecuritIIE we organized a CTF called FSIIEC CTF, accompanied by FSEC-SS the security club of APU. This article will be mix of advices and feedback from the organization of our CTF.</p>
+
+<p>Before starting, please note that this won’t be a technical article, I won’t dive deep into how we set up our infra or challenges, it will be more sort of an experience feedback and some advices that I could give to people who wanna create their own CTF with their friends/colleagues.</p>
+
+<h2 id="what-is-a-ctf-">What is a CTF ?</h2>
+
+<p>You can skip this part if you are used to CTF haha.</p>
+
+<p>CTF are basically cybersecurity competitions where people can compete on many topics such as web security, cryptography, reverse engineering…<br />
+Each category can have its own challenges to solve in order to gain <em>points</em>, yea you understand that the more you have points the more you are high ranked !<br />
+This competition can be either team or solo, online or presential and with many details that admins can change regarding the rules.</p>
+
+<h2 id="how-to-start-">How to start ?</h2>
+
+<p>Now that you know what is a CTF let’s say you wanna create one, what’s the starting point ?<br />
+Okay first you should have already been involved in CTF participation as a player, thus you will be able to understand what a player expects from this competition.  It can be regarding the type of challenges, difficulty, rabbit holes, organization…  This will give you a great experience to use as an admin for your next CTF.</p>
+
+<p>Next you will start to plan about some key points of your CTF :</p>
+<ul>
+  <li>Will it be competitive or educative ? For instance ours was educative, so the challenges were easier so that beginners can also join.</li>
+  <li>Who you wanna target ? We targeted only students from 3 universities with whom we have a partnership.</li>
+  <li>How long it will last ? This point is often underestimated while it’s very important. In fact if you choose to make it longer, it means that you will have
+to handle the platform during a longer time, so more awareness (and more tiredness haha), but it also means that if you have an incident you have more time to repare it. If you choose to make it shorter you will have probably less work regarding the number of the challenges to make, but it will be more intense. Our CTF was a 24 hour one, I will get into details about our CTF later in this article.</li>
+</ul>
+
+<h2 id="building-your-team">Building your team</h2>
+
+<p>That’s a <em>crucial</em> question, are you building this ctf with friends, colleagues ?<br />
+In our case all the members of our security club + two students from the same school joined together for that CTF.<br />
+From my experience it’s important to keep it as few as possible, too much people means harder communication, harder communication means more complex organization… Ya understand !</p>
+
+<p>So it’s important to maintain a balance between the number of people and the tasks assigned, so as not to spread yourself too thinly or end up with too much imbalance in the work done.</p>
+
+<p>Going back to our CTF, we basically had multiple persons with various skills : cryptography, reverse engineering, web… So it wasn’t hard deciding who will be in charge of what in priority. But don’t forget that one must not keep himself too focused on one category, helping others is part of the process too !</p>
+
+<h2 id="creation-and-testing-of-the-challenges">Creation and testing of the challenges</h2>
+
+<p>YOU. MUST. FOLLOW. A. PROCESS.<br />
+Yes.</p>
+
+<p>I know that many people don’t like conforming to processes, but that’s literally what will save you time and protect you from errors !</p>
+
+<p>Let’s take a step back to our CTF to see how this has played out in practice :</p>
+
+<p>The first step was to choose a collaborative platform, <strong>GitHub</strong> was <em>perfect</em> for that.</p>
+
+<p>Secondly, set up the rules for approving and testing the challenges. How we did that ?<br />
+Three stages : totest, approved, final.</p>
+<ul>
+  <li>The first folder contains challenges to test technically, the challenge and its solution must work.</li>
+  <li>The second contains challenges to approve globally, not only for the technical part but all the requirements regarding the difficulty, the statement…</li>
+  <li>Finally the third one contains the challenges that are ready to deploy to the infra, they are 100% good including details like flag, open port…<br />
+One important rule that we’ve put in place : Every time a file is moved from one stage to another, it must be verified by someone other than the person who created the challenge, in order to avoid mistakes that a designer can’t see, and to promote collaborative understanding.</li>
+</ul>
+
+<p>That’s for the static part, but testing must also be done when the challenges are deployed. Otherwise you’ll encounter bugs that you didn’t expect. (happened to us haha)</p>
+
+<h2 id="errors-that-you-can-avoid">Errors that you can avoid</h2>
+
+<ul>
+  <li>Always <strong>TEST</strong> your challenges, at each step.</li>
+  <li>Plan everything you’re going to do : challenge production, deployment, communication… That gives you a path to follow when you feel lost, but don’t feel too rigid about it.</li>
+  <li>If you are at the top of organization like I was, beware of not giving enough responsibility to your collaborators : you are responsible for steering the ship, but you can’t take it all on !</li>
+</ul>
+
+<h2 id="sponsors">Sponsors</h2>
+
+<p>An important part of your organization will be finding sponsors to finance the winners’ prizes. In our case, the sponsor was directly found: our school has a fund that enabled us to award the prizes to the ctf winners ! Presenting your project to your sponsors in a way that convinces them that it will give visibility to their brand is crucial.</p>
+
+<h2 id="promotion">Promotion</h2>
+
+<p>Lastly the part that engineers hate : Promotion &amp; Marketing !<br />
+Obviously, the goal is to get as many players as you can within the limits of your resources. In our case, we were open to students from 3 universities, which gave us over 200 players in the end.<br />
+We had 3 directions for communication: our school’s discord server, our club discord server and linkedin. Creating posters that are adapted to each platform and easy to understand is crucial to reach the maximum number of people. Using a qr code to transfer potential players to your site is a good idea (which we have implemented).<br />
+Note that we were not alone in promoting this event, as we organized it with FSEC-SS members from APU, who also helped us !</p>
+
+<h2 id="the-end">The End</h2>
+
+<p>That’s it guys, I hope you learned some things with this article. Feel free to tell me what could be missing, I might update it to make it more complete !</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>
