@@ -4,8 +4,8 @@
 entries:
   - title: me 
         entries:
-        - title: Security researcher
-        - title: Deeptech enthusiast, feel free to reach out if you wanna talk about cutting-edge tech
+          - title: Security researcher
+          - title: Deeptech enthusiast, feel free to reach out if you wanna talk about cutting-edge tech
       - title: Let's talk ;)
         entries:
           - title: Root-me - CTF platform
