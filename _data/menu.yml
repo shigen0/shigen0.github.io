@@ -3,11 +3,9 @@
 
 entries:
   - title: me 
-    entries:
-      - title: In two lines
         entries:
-          - title: Security researcher at FuzzingLabs
-          - title: Deeptech passionate, feel free to reach out if you wanna talk about cutting-edge tech
+        - title: Security researcher
+        - title: Deeptech enthusiast, feel free to reach out if you wanna talk about cutting-edge tech
       - title: Let's talk ;)
         entries:
           - title: Root-me - CTF platform
